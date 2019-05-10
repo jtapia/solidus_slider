@@ -15,7 +15,7 @@ Setup
 Add this extension to your Gemfile:
 
 ```ruby
-gem 'solidus_slider', github: 'jtapia/solidus_slider'
+gem 'solidus_slider', github: 'magma-labs/solidus_slider'
 ```
 
 Then run:
