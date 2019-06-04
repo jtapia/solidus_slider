@@ -38,4 +38,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'solidus_dev_support', '~> 2.3'
   s.add_development_dependency 'rb-fsevent'
   s.add_development_dependency 'growl'
+  s.add_development_dependency 'sqlite3', '~> 1.3.6'
 end
