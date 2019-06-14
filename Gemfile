@@ -29,12 +29,8 @@ group :test do
 end
 
 group :development, :test do
-  if branch == 'master' || branch >= 'v2.5'
-    gem 'factory_bot', '> 4.10.0'
-  elsif branch >= '2.3'
-    gem 'factory_girl'
-  end
-
+  gem 'factory_bot', (branch < 'v2.5' ? '4.10.0' : '> 4.10.0')
+  gem 'pry-rails'
   gem 'i18n-tasks', '~> 0.9' if branch == 'master'
 end
 
