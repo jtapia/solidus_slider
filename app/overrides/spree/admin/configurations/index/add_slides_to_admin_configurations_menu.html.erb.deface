@@ -1,0 +1,11 @@
+<!-- insert_bottom "[data-hook='admin_configurations_menu']" -->
+
+<tr>
+  <td><%= link_to I18n.t('slider.config_name'), admin_slides_path %></td>
+  <td><%= I18n.t('slider.config_description') %></td>
+</tr>
+
+<tr>
+  <td><%= link_to I18n.t('slider_locations.config_name'), admin_slide_locations_path %></td>
+  <td><%= I18n.t('slider_locations.config_description') %></td>
+</tr>

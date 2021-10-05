@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Spree
   module Admin
     class SlideLocationsController < ResourceController
@@ -10,11 +8,11 @@ module Spree
       end
 
       def search
-        @slide_locations = if params[:ids]
-                             Spree::SlideLocation.where(id: params[:ids])
-                           else
-                             Spree::SlideLocation.ransack(params[:q]).result
-                           end
+        if params[:ids]
+          @slide_locations = Spree::SlideLocation.where(id: params[:ids])
+        else
+          @slide_locations = Spree::SlideLocation.ransack(params[:q]).result
+        end
       end
     end
   end

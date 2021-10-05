@@ -1,11 +1,11 @@
-# frozen_string_literal: true
+require 'spec_helper'
 
-RSpec.describe Spree::Admin::SlideLocationsController do
+describe Spree::Admin::SlideLocationsController do
   stub_authorization!
 
   let(:slide_location) { create(:slide_location) }
 
-  describe '#index' do
+  context '#index' do
     it 'returns 200' do
       get :index
       expect(response.status).to eq(200)

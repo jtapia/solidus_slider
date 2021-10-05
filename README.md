@@ -1,6 +1,5 @@
 # Solidus Slider
-
-[![Circle CI](https://circleci.com/gh/jtapia/solidus_slider/tree/master.svg?style=shield)](https://circleci.com/gh/jtapia/solidus_slider/tree/master)
+[![CircleCI](https://circleci.com/gh/jtapia/solidus_slider.svg?style=svg)](https://circleci.com/gh/jtapia/solidus_slider)
 
 Credit to https://github.com/samanmohamadi/solidus_slider
 
