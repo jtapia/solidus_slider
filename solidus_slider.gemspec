@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
 
   s.summary = 'Solidus Slider extension'
   s.description = 'Adds a slider to the homepage'
-  s.homepage = 'https://github.com/jtapia/solidus_slider'
+  s.homepage = 'https://github.com/magma-labs/solidus_slider'
   s.license = 'BSD-3-Clause'
 
   if s.respond_to?(:metadata)
