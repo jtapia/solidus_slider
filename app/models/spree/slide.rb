@@ -2,7 +2,7 @@
 
 module Spree
   class Slide < ApplicationRecord
-    belongs_to :product, touch: true
+    belongs_to :product, touch: true, optional: true
 
     has_many :slide_slide_locations
     has_many :slide_locations, through: :slide_slide_locations
