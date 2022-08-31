@@ -4,8 +4,10 @@ module Spree
   class Slide < ApplicationRecord
     belongs_to :product, touch: true, optional: true
 
-    has_many :slide_slide_locations
-    has_many :slide_locations, through: :slide_slide_locations
+    has_many :slide_slide_locations,
+             dependent: :nullify
+    has_many :slide_locations,
+             through: :slide_slide_locations
 
     has_attached_file :image,
       url: '/spree/slides/:id/:style/:basename.:extension',
