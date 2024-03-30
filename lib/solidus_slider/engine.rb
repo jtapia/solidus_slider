@@ -16,20 +16,24 @@ module SolidusSlider
       g.test_framework :rspec
     end
 
-    config.to_prepare do
+    initializer 'solidus_slider.configure_backend' do
+      next unless ::Spree::Backend::Config.respond_to?(:menu_items)
+
       ::Spree::Backend::Config.configure do |config|
         config.menu_items << config.class::MenuItem.new(
-          [:slides],
-          'photo',
-          label: 'slides',
-          condition: -> { can?(:manage, ::Spree::Slide) }
+          label: :slides,
+          icon: 'photo',
+          url: :admin_slides_path,
+          condition: -> { can?(:manage, ::Spree::Slide) },
+          match_path: '/slides'
         )
 
         config.menu_items << config.class::MenuItem.new(
-          [:slide_locations],
-          'wrench',
-          label: 'slide_locations',
-          condition: -> { can?(:manage, ::Spree::SlideLocation) }
+          label: :slide_locations,
+          icon: 'wrench',
+          url: :admin_slide_locations_path,
+          condition: -> { can?(:manage, ::Spree::SlideLocation) },
+          match_path: '/slide_locations'
         )
       end
     end
