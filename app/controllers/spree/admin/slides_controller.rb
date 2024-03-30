@@ -55,7 +55,7 @@ module Spree
           :image,
           :position,
           :product_id,
-          :slide_location_ids
+          slide_location_ids: []
         )
       end
 

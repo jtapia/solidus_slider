@@ -32,13 +32,6 @@ else
   gem 'sqlite3'
 end
 
-gem 'rails-controller-testing', group: :test
-
-group :development, :test do
-  gem 'factory_bot', '> 4.10.0'
-  gem 'pry-rails'
-end
-
 # While we still support Ruby < 3 we need to workaround a limitation in
 # the 'async' gem that relies on the latest ruby, since RubyGems doesn't
 # resolve gems based on the required ruby version.
