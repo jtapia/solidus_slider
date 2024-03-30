@@ -42,4 +42,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'solidus_frontend', solidus_version
   s.add_development_dependency 'rb-fsevent'
   s.add_development_dependency 'growl'
+  s.add_development_dependency 'rails-controller-testing'
+  s.add_development_dependency 'rb-fsevent'
+  s.add_development_dependency 'solidus_dev_support', '~> 2.7'
 end
